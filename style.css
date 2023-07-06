@@ -1,7 +1,7 @@
-body{
-  background-image: url("https://w0.peakpx.com/wallpaper/410/412/HD-wallpaper-plain-black-black.jpg");
+/* body { 
+ background-image: url("https://w0.peakpx.com/wallpaper/410/412/HD-wallpaper-plain-black-black.jpg");
 }
-/*#descript{
+ #descript{
     text-align: center;
     color: blue;
     font-family: Arial, Helvetica, sans-serif;
@@ -27,7 +27,7 @@ body{
   section{
     width: 100%;
     height: 100vh;
-    background-image: url("https://t3.ftcdn.net/jpg/04/40/47/80/360_F_440478068_3epkyuEJf9itdwsgK4ZR5NWZ5PVIx1Yq.jpg");
+   background-image: url("https://t3.ftcdn.net/jpg/04/40/47/80/360_F_440478068_3epkyuEJf9itdwsgK4ZR5NWZ5PVIx1Yq.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -102,6 +102,7 @@ body{
     font-size: 70px;
     background: linear-gradient(to right, red, purple);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   section .main .main_content .main_text p{
@@ -138,7 +139,7 @@ body{
     left: 6%;
     padding: 10px 20px;
     border-radius: 30px;
-    background: linear-gradient(to right, purple, green);
+   background: linear-gradient(to right, purple, green);
   }
   section .main .button a{
     color: white;
@@ -165,11 +166,12 @@ body{
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    background: linear-gradient(to right, green, purple);
-    -webkit-backgroundclip: text;
+   background: linear-gradient(to right, green, purple);
+   /*background: linear-gradient(to right, rgb(19, 20, 19), rgb(133, 130, 133));*/
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-.menu-items ul {
+  .menu-items ul {
   list-style: circle;
   padding: 0;
 }
@@ -193,7 +195,7 @@ body{
 }
 
 
-/*.image-co img {
+.image-co img {
   width: 150px;
   height: auto;
   border: 1px solid #f00;
@@ -210,7 +212,7 @@ body{
   width: 400px;
   height: auto;
   transform: rotate(0deg);
-  margin-bottom: 10px;
+  margin-bottom: -50px;
 }
 
 .image-grid {
@@ -278,6 +280,69 @@ body{
 }
 .product-details h3 {
   color: red;
+}
+
+/*about*/
+/*.about{
+  width: 100%;
+  height: 10vh;
+  padding: 35px 0;
+}
+
+.about h1{
+  font-size: 60px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background: blue;
+}
+.about h1 span{
+  background:  linear-gradient(to right rgb(38, 38, 39), rgb(27, 27, 27));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 15px;
+}
+/*.about_text p {
+  color: blueviolet;
+  border: 1px solid white;
+}*/
+
+
+.about {
+  width: 100%;
+  padding: 35px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.about h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, rgb(38, 38, 39), rgb(27, 27, 27));
+}
+
+.about h1 span {
+  background: linear-gradient(to right, rgb(38, 38, 39), rgb(27, 27, 27));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 15px;
+}
+
+.about_text p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 20px;
 }
 
 
