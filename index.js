@@ -63,8 +63,6 @@ function createShoeCard(shoe) {
 // Event listener for "Men" link click
 document.getElementById("menLink").addEventListener("click", displayMenShoes);
 
-
-// Rest of your code...
 const addToCartButtons = document.getElementsByClassName('btn');
 const popupMessage = document.getElementById('popup-message');
 
@@ -136,7 +134,6 @@ document.getElementById("loginFormContent").addEventListener("submit", function(
   var password = document.getElementById("password").value;
   
   // Perform any necessary actions with the username and password values
-  // For example, you can make an AJAX request to submit the form data to the server
   
   // Clear the form fields
   document.getElementById("username").value = "";
