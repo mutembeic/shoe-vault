@@ -371,7 +371,7 @@
   height: auto;
 }
 
-.product-details h2 {
+/*.product-details h2 {
   margin-top: 10px;
 }
 
@@ -381,7 +381,7 @@
 
 .product-details h3 {
   font-weight: bold;
-}
+}*/
 
 .btn {
   display: inline-block;
