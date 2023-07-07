@@ -1,61 +1,5 @@
-let shoesData; // Declare the shoesData variable outside the fetch block
 
-fetch('http://localhost:3000/mens')
-  .then(response => response.json())
-  .then(data => {
-    shoesData = data; // Assign the fetched data to the shoesData variable
 
-    // Get the 'Men' link element
-    const menLink = document.getElementById('menLink');
-
-    // Add click event listener to 'Men' link
-    menLink.addEventListener('click', displayMenShoes);
-
-    // Function to display men's shoes
-    function displayMenShoes() {
-      // Get the container element to display the shoes
-      const shoesContainer = document.getElementById('shoesContainer');
-
-      // Clear any existing content in the container
-      shoesContainer.innerHTML = '';
-
-      // Loop through the men's shoes data and create HTML elements
-      shoesData.forEach(shoe => {
-        // Create the shoe card element
-        const shoeCard = document.createElement('div');
-        shoeCard.classList.add('shoe-card');
-
-        // Create the shoe image element
-        const shoeImage = document.createElement('img');
-        shoeImage.src = shoe.image;
-        shoeImage.alt = shoe.name;
-
-        // Create the shoe name element
-        const shoeName = document.createElement('h3');
-        shoeName.textContent = shoe.name;
-
-        // Create the shoe price element
-        const shoePrice = document.createElement('p');
-        shoePrice.textContent = `Price: ${shoe.price}`;
-
-        // Append the elements to the shoe card
-        shoeCard.appendChild(shoeImage);
-        shoeCard.appendChild(shoeName);
-        shoeCard.appendChild(shoePrice);
-
-        // Append the shoe card to the container
-        shoesContainer.appendChild(shoeCard);
-      });
-
-      // Show the shoes container after rendering the shoes
-      shoesContainer.style.display = 'block';
-    }
-
-    // Rest of your code here...
-  })
-  .catch(error => {
-    console.log('An error occurred while fetching data:', error);
-  });
 
 // Rest of your code...
 const addToCartButtons = document.getElementsByClassName('btn');
@@ -90,39 +34,54 @@ function toggleMenuItems() {
 
 // Add click event listener to menu icon
 menuIcon.addEventListener('click', toggleMenuItems);
+//function of purchase and cancel button
+function purchaseItem(button) {
+  var productDetails = button.parentNode.parentNode;
+  var purchaseButton = productDetails.querySelector('.purchase-btn');
+  var cancelButton = productDetails.querySelector('.cancel-btn');
 
+  // Update button styles
+  purchaseButton.classList.add('purchased');
+  cancelButton.disabled = false; // Set the 'disabled' attribute to false
 
-
-
-
-function displayMenShoes() {
-  const shoesContainer = document.getElementById('shoesContainer');
-  shoesContainer.innerHTML = '';
-
-  if (Array.isArray(shoesData)) {
-    shoesData.forEach(shoe => {
-      const shoeCard = document.createElement('div');
-      shoeCard.classList.add('shoe-card');
-
-      const shoeImage = document.createElement('img');
-      shoeImage.src = shoe.image;
-      shoeImage.alt = shoe.name;
-
-      const shoeName = document.createElement('h3');
-      shoeName.textContent = shoe.name;
-
-      const shoePrice = document.createElement('p');
-      shoePrice.textContent = `Price: ${shoe.price}`;
-
-      shoeCard.appendChild(shoeImage);
-      shoeCard.appendChild(shoeName);
-      shoeCard.appendChild(shoePrice);
-
-      shoesContainer.appendChild(shoeCard);
-    });
-  } else {
-    console.log('Error: Invalid shoes data');
-  }
-
-  shoesContainer.style.display = 'block';
+  // Show success message
+  alert('Purchase was successful we will contact you on delivery details');
 }
+
+function cancelPurchase(button) {
+  var productDetails = button.parentNode.parentNode;
+  var purchaseButton = productDetails.querySelector('.purchase-btn');
+  var cancelButton = productDetails.querySelector('.cancel-btn');
+
+  // Update button styles
+  purchaseButton.classList.remove('purchased');
+  cancelButton.disabled = true;
+
+  // Show cancellation message
+  alert('Cancellation was successful');
+}
+
+
+
+function showLoginForm() {
+  document.getElementById("loginForm").style.display = "block";
+}
+
+document.getElementById("loginFormContent").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  
+  // Perform any necessary actions with the username and password values
+  // For example, you can make an AJAX request to submit the form data to the server
+  
+  // Clear the form fields
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
+  
+  // Hide the form
+  document.getElementById("loginForm").style.display = "none";
+  
+  // Show success message
+  alert("Form submitted successfully!");
+});

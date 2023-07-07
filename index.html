@@ -20,7 +20,7 @@
                      <li>Women</li>
                   </ul>
                 </div>
-                <div id="shoesContainer"></div>
+                <div id="shoeList"></div>
 
 
                 <ul>
@@ -36,8 +36,16 @@
                <div class="icons">
                     <i class="fa-solid fa-heart"></i>
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <i class="fa-sharp fa-solid fa-user"></i> 
                 </div>
+                <div id="loginForm" style="display: none;">
+                  <form id="loginFormContent">
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password">
+                    <button type="submit">Submit</button>
+                  </form>
+                </div>
+              
+                <button onclick="showLoginForm()">Show Login Form</button>              
             </nav>
             <div class="main" id="Home">
                 <div class="main_content">
@@ -93,6 +101,11 @@
         </div>
         <a href="#" class="btn">Add To Cart</a>
       </div>
+    <div class="product-actions">
+     <button class="purchase-btn btn" onclick="purchaseItem(this)">Purchase</button>
+    <button class="cancel-btn btn" onclick="cancelPurchase(this)">Cancel</button>
+   </div>
+
     </div>
     <div class="grid-item">
       <img src="https://image.kilimall.com/kenya/shop/store/goods/7027/2021/03/7027_06679432886013457_720.jpeg.webp" alt="Image 2">
@@ -109,6 +122,11 @@
         </div>
         <a href="#" class="btn">Add To Cart</a>
       </div>
+      <div class="product-actions">
+        <button class="purchase-btn btn" onclick="purchaseItem(this)">Purchase</button>
+        <button class="cancel-btn btn" onclick="cancelPurchase(this)">Cancel</button>
+     </div>
+
     </div>
     <div class="grid-item">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-z0jAobppdpwY2-YZpfZ0MTMurqhSZVrpWK8xvmGfzq28yGlvSDIewY16EQwTGELb5kU&usqp=CAU" alt="Image 2">
@@ -125,6 +143,11 @@
         </div>
         <a href="#" class="btn">Add To Cart</a>
       </div>
+    <div class="product-actions">
+     <button class="purchase-btn btn" onclick="purchaseItem(this)">Purchase</button>
+     <button class="cancel-btn btn" onclick="cancelPurchase(this)">Cancel</button>
+   </div>
+
     </div>
   </div>
 
@@ -144,6 +167,11 @@
         </div>
         <a href="#" class="btn">Add To Cart</a>
       </div>
+    <div class="product-actions">
+      <button class="purchase-btn btn" onclick="purchaseItem(this)">Purchase</button>
+      <button class="cancel-btn btn" onclick="cancelPurchase(this)">Cancel</button>
+    </div>
+
     </div>
     <div class="grid-item">
       <img src="https://e1.pxfuel.com/desktop-wallpaper/203/1018/desktop-wallpaper-men%C2%B4s-basketball-cheap-shoes-2018-off-nike-kyrie-4.jpg" alt="Image 5">
@@ -160,6 +188,11 @@
         </div>
         <a href="#" class="btn">Add To Cart</a>
       </div>
+   <div class="product-actions">
+     <button class="purchase-btn btn" onclick="purchaseItem(this)">Purchase</button>
+     <button class="cancel-btn btn" onclick="cancelPurchase(this)">Cancel</button>
+  </div>
+
     </div>
     <div class="grid-item">
       <img src="https://static-01.daraz.com.bd/p/bcc815f79930e54314347eccf70915ae.jpg" alt="Image 6">
@@ -178,6 +211,11 @@
         <div id="popup-message" class="popup-message">
             <p>Item has been added to cart successfully</p>
           </div>
+    <div class="product-actions">
+       <button class="purchase-btn btn" onclick="purchaseItem(this)">Purchase</button>
+       <button class="cancel-btn btn" onclick="cancelPurchase(this)">Cancel</button>
+    </div>
+
       </div>
     </div>
   </div>
@@ -204,9 +242,27 @@
     </p>
      </div>
 
-    <!--Services-->
-    <div class="Services" id="Service">
-      <h1>our<span>services</span></h1>
+      <!--Services-->
+    <div class="services">
+      <h2>Our Services</h2>
+      <p>
+        At Shoe Vault, we offer a wide range of services to enhance your shoe shopping experience. 
+        With our state-of-the-art delivery system, your shoes will be delivered to your doorstep with speed and precision, 
+        just like a <i class="fa-solid fa-truck"></i> truck on the move.
+      </p>
+      <p>
+        Our dedicated team of experts is always ready to assist you in finding the perfect pair of shoes. 
+        From personalized recommendations to answering your queries, we strive to provide exceptional <i class="fa-solid fa-comments"></i> customer support,
+         ensuring that your needs are met and your shopping journey is smooth.
+      </p>
+      <p>
+        We take pride in offering a secure and convenient payment process. With our <i class="fa-solid fa-lock"></i> secure checkout system, 
+        you can shop with confidence, knowing that your personal and financial information is protected.
+      </p>
+      <p>
+        Experience the convenience of online shoe shopping with Shoe Vault, where our services are designed to make your journey delightful, 
+        from browsing our extensive collection to the joy of unboxing your new pair of shoes.
+      </p>
     </div>
   <script src="index.js"></script>
 </body>
