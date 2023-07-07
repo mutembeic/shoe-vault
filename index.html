@@ -21,6 +21,15 @@
                   </ul>
                 </div> 
                <div id="shoeList"></div>
+               <div id="cartOverlay" style="display: none;">
+                <div id="cartContent">
+                  <h2>Cart</h2>
+                  <ul id="cartList"></ul>
+                  <button onclick="hideCart()">Close</button>
+                </div>
+              </div>
+              
+              
                 <ul>
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#products">products</a></li>
@@ -33,7 +42,7 @@
                 </form> 
                <div class="icons">
                     <i class="fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-cart-shopping" onclick="showCart()"></i>
                 </div>
                 <div id="loginForm" style="display: none;">
                   <form id="loginFormContent">
@@ -91,7 +100,7 @@
         <h2>NIKE</h2>
         <p>Men Basketball Cheap Shoes 2018 Off, nike kyrie </p>
          <p>Available in all size</p>
-        <h3>KSH 3500</h3>
+        <h3>KSH 3400</h3>
         <div class="product-rating">
             <i class="fa-sharp fa-solid fa-star"></i>
             <i class="fa-sharp fa-solid fa-star"></i>
@@ -99,7 +108,7 @@
             <i class="fa-sharp fa-solid fa-star"></i>
             <i class="fa-sharp fa-solid fa-star"></i>
         </div>
-        <a href="#" class="btn">Add To Cart</a>
+        <a href="#" class="btn" onclick="addToCart(0)">Add To Cart</a>
       </div>
     <div class="product-actions">
      <button class="purchase-btn btn" onclick="purchaseItem(this)">Purchase</button>

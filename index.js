@@ -145,3 +145,6 @@ document.getElementById("loginFormContent").addEventListener("submit", function(
   // Show success message
   alert("Form submitted successfully!");
 });
+
+
+ 
