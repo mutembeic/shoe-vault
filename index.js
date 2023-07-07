@@ -39,12 +39,21 @@ function createShoeCard(shoe) {
   details.appendChild(name);
 
   // Add other shoe details (price, color, size, etc.) here...
-
   const addToCartBtn = document.createElement("a");
   addToCartBtn.href = "#";
   addToCartBtn.classList.add("btn");
   addToCartBtn.textContent = "Add To Cart";
   details.appendChild(addToCartBtn);
+
+  const purchaseBtn = document.createElement("button");
+  purchaseBtn.classList.add("btn", "purchase-btn");
+  purchaseBtn.textContent = "Purchase";
+  details.appendChild(purchaseBtn);
+
+  const cancelBtn = document.createElement("button");
+  cancelBtn.classList.add("btn", "cancel-btn");
+  cancelBtn.textContent = "Cancel";
+  details.appendChild(cancelBtn);
 
   card.appendChild(details);
 
