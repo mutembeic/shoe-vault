@@ -1,4 +1,58 @@
+// Function to fetch and display men's shoes
+function displayMenShoes() {
+  // Fetch the shoe data from the server
+  fetch("http://localhost:3000/mens")
+    .then((response) => response.json())
+    .then((data) => {
+      // Get the shoe container element
+      const shoeContainer = document.getElementById("shoeList");
 
+      // Clear the shoe container
+      shoeContainer.innerHTML = "";
+
+      // Create shoe cards and append them to the container
+      data.forEach((shoe) => {
+        const shoeCard = createShoeCard(shoe);
+        shoeContainer.appendChild(shoeCard);
+      });
+    })
+    .catch((error) => {
+      console.log("Error fetching shoe data:", error);
+    });
+}
+
+// Function to create a shoe card element
+function createShoeCard(shoe) {
+  const card = document.createElement("div");
+  card.classList.add("grid-item");
+
+  const image = document.createElement("img");
+  image.src = shoe.image;
+  image.alt = shoe.name;
+  card.appendChild(image);
+
+  const details = document.createElement("div");
+  details.classList.add("product-details");
+
+  const name = document.createElement("h2");
+  name.textContent = shoe.name;
+  details.appendChild(name);
+
+  // Add other shoe details (price, color, size, etc.) here...
+
+  const addToCartBtn = document.createElement("a");
+  addToCartBtn.href = "#";
+  addToCartBtn.classList.add("btn");
+  addToCartBtn.textContent = "Add To Cart";
+  details.appendChild(addToCartBtn);
+
+  card.appendChild(details);
+
+  return card;
+}
+
+// Event listener for "Men" link click
+document.getElementById("menLink").addEventListener("click", displayMenShoes);
 
 
 // Rest of your code...
